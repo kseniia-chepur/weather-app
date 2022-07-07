@@ -1,0 +1,134 @@
+body {
+  font-family: "Anek Malayalam", sans-serif;
+  font-weight: 400;
+}
+
+video {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.container {
+  max-width: 600px;
+  color: #4c5374;
+  background: rgba(225, 200, 155, 0.801);
+  margin: 30px auto;
+  border-radius: 5px;
+  --webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.search-form {
+  width: 95%;
+  margin-left: 15px;
+}
+
+.form-control,
+.btn {
+  margin-top: 20px;
+}
+
+.card,
+.form-contro {
+  background: rgba(231, 224, 187, 0.7);
+  border: none;
+}
+
+.search-btn {
+  background: #4c5374;
+  color: #feffdf;
+  box-sizing: border-box;
+}
+
+.current-location-btn {
+  background: rgba(110, 112, 91, 0.881);
+  color: #ebffdf;
+}
+
+.current-forecast {
+  margin: 25px auto;
+  color: #497285;
+}
+
+.city {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 14px;
+  margin-top: 5px;
+}
+
+.current-date {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.temperature {
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.temperature-scale {
+  font-size: 14px;
+  position: relative;
+  top: -14px;
+}
+
+.weather-description {
+  font-size: 26px;
+  font-weight: bold;
+  margin-left: 40px;
+  line-height: 24px;
+}
+
+.current-values {
+  font-size: 14px;
+  line-height: 18px;
+  margin-left: 90px;
+  margin-bottom: 10px;
+}
+
+.five-days-forecast {
+  margin: 15px auto;
+  text-align: center;
+}
+
+.day-of-week {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 16px;
+  margin-bottom: 10px;
+}
+
+.five-days-values {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.night-temp {
+  opacity: 0.7;
+}
+
+.footer {
+  color: #feffdf;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  font-family: cursive;
+  margin: 25px auto;
+}
