@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e653be7645.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Weather app</title>
+  </head>
+  <body>
+    <video src="video/map.mp4" autoplay loop muted></video>
+    <div class="container">
+      <form class="search-form" id="search-form">
+        <div class="row">
+          <div class="col-6">
+            <input
+              type="🇸earch"
+              class="form-control shadow-sm"
+              placeholder="Search City"
+              autocomplete="off"
+              id="search-input"
+            />
+          </div>
+          <div class="col-3">
+            <input
+              type="submit"
+              class="form-control btn search-btn shadow-sm"
+              value="Search"
+            />
+          </div>
+          <div class="col-3">
+            <button
+              type="button"
+              class="btn current-location-btn w-100 shadow-sm"
+              id="current-location-btn"
+            >
+              Current
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="row current-forecast">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h1 class="card-title city" id="city"></h1>
+              <h2 class="current-date" id="date"></h2>
+              <span class="temperature" id="temperature"></span>
+              <span class="temperature-scale">°C</span>
+              <span class="weather-description" id="description"></span>
+              <ul class="card-text current-values">
+                <li>
+                  <i class="fa-solid fa-droplet"></i> Humidity
+                  <span id="humidity"></span>%
+                </li>
+                <li>
+                  <i class="fa-solid fa-wind"></i> Wind
+                  <span id="wind"></span> km/h
+                </li>
+                <li>
+                  <i class="fa-solid fa-temperature-half"></i> RealFeels
+                  <span id="real-feels"></span>°C
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row five-days-forecast">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title day-of-week">MON</h2>
+              <h3 class="date">27 Jun</h3>
+              <p class="card-text five-days-values">☀ Sunny</p>
+              <p class="card-text five-days-values">
+                28°C <br /><span class="night-temp">19°C</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title day-of-week">TUE</h2>
+              <h3 class="date">27 Jun</h3>
+              <p class="card-text five-days-values">☀ Sunny</p>
+              <p class="card-text five-days-values">
+                32°C <br /><span class="night-temp">18°C</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title day-of-week">WED</h2>
+              <h3 class="date">28 Jun</h3>
+              <p class="card-text five-days-values">☀ Sunny</p>
+              <p class="card-text five-days-values">
+                32°C <br /><span class="night-temp">19°C</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title day-of-week">THU</h2>
+              <h3 class="date">29 Jun</h3>
+              <p class="card-text five-days-values">☁ Cloudy</p>
+              <p class="card-text five-days-values">
+                28°C <br /><span class="night-temp">19°C</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title day-of-week">FRI</h2>
+              <h3 class="date">30 Jun</h3>
+              <p class="card-text five-days-values">☀ Sunny</p>
+              <p class="card-text five-days-values">
+                30°C <br /><span class="night-temp">18°C</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">Coded by Kseniia Chepur</div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
