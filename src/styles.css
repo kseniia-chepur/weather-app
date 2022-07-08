@@ -17,9 +17,14 @@ ul {
   margin-top: 20px;
 }
 
+a {
+  text-decoration: none;
+  color: #feffdf;
+}
+
 .container {
   max-width: 600px;
-  color: #4c5374;
+  color: #335260;
   background: rgba(225, 200, 155, 0.801);
   margin: 30px auto;
   border-radius: 5px;
@@ -39,19 +44,19 @@ ul {
 }
 
 .card,
-.form-contro {
+.form-control {
   background: rgba(231, 224, 187, 0.7);
   border: none;
 }
 
 .search-btn {
-  background: #4c5374;
+  background: #6b8a98;
   color: #feffdf;
-  box-sizing: border-box;
+  border: 1px solid #6b8a98;
 }
 
 .current-location-btn {
-  background: rgba(110, 112, 91, 0.881);
+  background: #4c5374;
   color: #ebffdf;
 }
 
