@@ -27,7 +27,7 @@ a {
   color: #335260;
   background: rgba(225, 200, 155, 0.801);
   margin: 30px auto;
-  border-radius: 5px;
+  border-radius: 7px;
   --webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
@@ -78,7 +78,7 @@ a {
 }
 
 .temperature {
-  font-size: 34px;
+  font-size: 36px;
   font-weight: bold;
   line-height: 24px;
 }
@@ -90,9 +90,10 @@ a {
 }
 
 .weather-description {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: bold;
-  margin-left: 40px;
+  text-transform: capitalize;
+  margin-left: 36px;
   line-height: 24px;
 }
 
@@ -131,7 +132,7 @@ a {
 
 .footer {
   color: #feffdf;
-  font-size: 14px;
+  font-size: 13px;
   font-style: italic;
   text-align: center;
   font-family: cursive;

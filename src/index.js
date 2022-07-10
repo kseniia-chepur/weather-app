@@ -17,18 +17,26 @@ function getCurrentDateAndTime(currentDate) {
     "Friday",
     "Saturday",
   ];
+  let year = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
   let day = week[currentDate.getDay()];
-  let hour = currentDate.getHours();
-  if (hour < 10) {
-    hour = `0${hour}`;
-  }
-  let minutes = currentDate.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+  let month = year[currentDate.getMonth()];
+  let date = currentDate.getDate();
 
-  return `${day} ${hour}:${minutes}`;
+  return `${day}, ${month} ${date}`;
 }
 
 // Search by input
@@ -63,7 +71,7 @@ function getWeatherForecast(response) {
   );
 
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
 
