@@ -11,15 +11,14 @@ video {
   z-index: -1;
 }
 
+a {
+  text-decoration: none;
+}
+
 ul {
   list-style: none;
   padding-left: 0;
   margin-top: 20px;
-}
-
-a {
-  text-decoration: none;
-  color: #feffdf;
 }
 
 .container {
@@ -65,10 +64,6 @@ a {
   color: #335260;
 }
 
-.current-weather {
-  line-height: 1;
-}
-
 .city {
   font-size: 30px;
   font-weight: bold;
@@ -82,13 +77,22 @@ a {
 }
 
 .temperature {
-  font-size: 40px;
+  font-size: 38px;
 }
 
 .temperature-scale {
-  font-size: 18px;
+  font-size: 15px;
   position: relative;
   bottom: -8px;
+}
+
+.active {
+  color: #335260;
+}
+
+.active:hover {
+  cursor: default;
+  color: #335260;
 }
 
 .weather-description {
@@ -97,11 +101,13 @@ a {
   text-transform: capitalize;
   line-height: 34px;
   position: relative;
-  top: 20px;
+  top: 18px;
+  margin-left: 10px;
 }
 
 .current-values {
   font-size: 14px;
+  margin-left: 10px;
 }
 
 .five-days-forecast {
@@ -137,4 +143,8 @@ a {
   text-align: center;
   font-family: cursive;
   margin: 25px auto;
+}
+
+.footer a {
+  color: #feffdf;
 }
