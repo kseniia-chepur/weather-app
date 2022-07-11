@@ -57,28 +57,37 @@
         </div>
       </form>
       <div class="row current-forecast">
-        <div class="col-sm-6">
+        <div class="col-6">
           <div class="card">
             <div class="card-body">
               <h1 class="card-title city" id="city"></h1>
               <h2 class="current-date" id="date"></h2>
-              <strong class="temperature" id="temperature"></strong>
-              <span class="temperature-scale">°C</span>
-              <span class="weather-description" id="description"></span>
-              <ul class="card-text current-values">
-                <li>
-                  <i class="fa-solid fa-droplet"></i> Humidity
-                  <span id="humidity"></span>%
-                </li>
-                <li>
-                  <i class="fa-solid fa-wind"></i> Wind
-                  <span id="wind"></span> km/h
-                </li>
-                <li>
-                  <i class="fa-solid fa-temperature-half"></i> RealFeels
-                  <span id="real-feels"></span>°C
-                </li>
-              </ul>
+              <div class="row">
+                <div class="col-5">
+                  <div class="d-flex">
+                    <img width="58" id="weather-icon" src="" alt="" />
+                    <strong class="temperature" id="temperature"></strong>
+                    <span class="temperature-scale">°C</span>
+                  </div>
+                </div>
+                <div class="col-7">
+                  <span class="weather-description" id="description"></span>
+                  <ul class="card-text current-values">
+                    <li>
+                      <i class="fa-solid fa-droplet"></i> Humidity
+                      <span id="humidity"></span>%
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-wind"></i> Wind
+                      <span id="wind"></span> km/h
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-temperature-half"></i> RealFeels
+                      <span id="real-feels"></span>°C
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>

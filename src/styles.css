@@ -23,8 +23,8 @@ a {
 }
 
 .container {
-  max-width: 600px;
-  color: #335260;
+  max-width: 650px;
+  color: #497285;
   background: rgba(225, 200, 155, 0.801);
   margin: 30px auto;
   border-radius: 7px;
@@ -50,9 +50,9 @@ a {
 }
 
 .search-btn {
-  background: #6b8a98;
+  background: #497285;
   color: #feffdf;
-  border: 1px solid #6b8a98;
+  border: 1px solid #497285;
 }
 
 .current-location-btn {
@@ -62,7 +62,11 @@ a {
 
 .current-forecast {
   margin: 25px auto;
-  color: #497285;
+  color: #335260;
+}
+
+.current-weather {
+  line-height: 1;
 }
 
 .city {
@@ -78,30 +82,26 @@ a {
 }
 
 .temperature {
-  font-size: 36px;
-  font-weight: bold;
-  line-height: 24px;
+  font-size: 40px;
 }
 
 .temperature-scale {
-  font-size: 14px;
+  font-size: 18px;
   position: relative;
-  top: -14px;
+  bottom: -8px;
 }
 
 .weather-description {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   text-transform: capitalize;
-  margin-left: 36px;
-  line-height: 24px;
+  line-height: 34px;
+  position: relative;
+  top: 20px;
 }
 
 .current-values {
   font-size: 14px;
-  line-height: 18px;
-  margin-left: 90px;
-  margin-bottom: 10px;
 }
 
 .five-days-forecast {

@@ -10,7 +10,7 @@ currentDate.innerHTML = getCurrentDateAndTime(new Date());
 function getCurrentDateAndTime(currentDate) {
   let week = [
     "Sunday",
-    "Monday,",
+    "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
@@ -62,9 +62,14 @@ function searchByCity(city) {
 // Get current weather forecast
 
 function getWeatherForecast(response) {
-  let city = response.data.name;
-  let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = city;
+  document.querySelector("#city").innerHTML = response.data.name;
+
+  document
+    .querySelector("#weather-icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
