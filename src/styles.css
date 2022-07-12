@@ -1,13 +1,11 @@
 body {
   font-family: "Anek Malayalam", sans-serif;
-  font-weight: 400;
 }
 
 video {
-  position: fixed;
+  position: absolute;
   top: 0;
-  right: 0;
-  left: 0;
+  width: 100%;
   z-index: -1;
 }
 
@@ -116,7 +114,16 @@ ul {
 .five-days-forecast {
   margin: 15px auto;
   text-align: center;
-  color: #497285;
+  color: #495485;
+}
+
+.selected-day {
+  transition: 150ms all ease-in-out;
+}
+
+.selected-day:hover {
+  background: rgba(185, 217, 232, 0.792);
+  cursor: pointer;
 }
 
 .day-of-week {
