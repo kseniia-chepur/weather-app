@@ -4,9 +4,6 @@ document.querySelector("video").playbackRate = "0.3";
 
 // Get current date
 
-let currentDate = document.querySelector("#date");
-currentDate.innerHTML = getCurrentDateAndTime(new Date());
-
 function getCurrentDateAndTime(currentDate) {
   let week = [
     "Sunday",
@@ -39,10 +36,10 @@ function getCurrentDateAndTime(currentDate) {
   return `${day}, ${month} ${date}`;
 }
 
-// Search by input
+let currentDate = document.querySelector("#date");
+currentDate.innerHTML = getCurrentDateAndTime(new Date());
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
+// Search by input
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -58,6 +55,9 @@ function searchByCity(city) {
 
   axios.get(url).then(getWeatherForecast);
 }
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
 
 // Get current weather forecast
 
@@ -80,7 +80,7 @@ function getWeatherForecast(response) {
     Math.round(celsiusTemperature);
 
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].description;
+    response.data.weather[0].main;
 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
 
@@ -94,9 +94,6 @@ function getWeatherForecast(response) {
 }
 
 // Get geolocation coordinates
-
-let currentLocationBtn = document.querySelector("#current-location-btn");
-currentLocationBtn.addEventListener("click", requestGeolocationCoords);
 
 function requestGeolocationCoords(event) {
   event.preventDefault();
@@ -113,14 +110,10 @@ function getGeolocationCoords(position) {
   axios.get(url).then(getWeatherForecast);
 }
 
+let currentLocationBtn = document.querySelector("#current-location-btn");
+currentLocationBtn.addEventListener("click", requestGeolocationCoords);
+
 // Convert temperature scales
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", convertToFahrenheit);
-
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", convertToCelsius);
-
-let celsiusTemperature = null;
 
 function convertToFahrenheit(event) {
   event.preventDefault();
@@ -143,6 +136,14 @@ function convertToCelsius(event) {
   document.querySelector("#temperature").innerHTML =
     Math.round(celsiusTemperature);
 }
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", convertToFahrenheit);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", convertToCelsius);
+
+let celsiusTemperature = null;
 
 // Initial forecast
 

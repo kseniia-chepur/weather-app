@@ -11,6 +11,10 @@ video {
   z-index: -1;
 }
 
+img {
+  width: 58px;
+}
+
 a {
   text-decoration: none;
 }
@@ -21,9 +25,8 @@ ul {
   margin-top: 20px;
 }
 
-.container {
+.app-wrapper {
   max-width: 650px;
-  color: #497285;
   background: rgba(225, 200, 155, 0.801);
   margin: 30px auto;
   border-radius: 7px;
@@ -96,12 +99,12 @@ ul {
 }
 
 .weather-description {
-  font-size: 18px;
+  font-size: 26px;
   font-weight: bold;
   text-transform: capitalize;
-  line-height: 34px;
+  line-height: 1.5;
   position: relative;
-  top: 18px;
+  top: 13px;
   margin-left: 10px;
 }
 
@@ -113,6 +116,7 @@ ul {
 .five-days-forecast {
   margin: 15px auto;
   text-align: center;
+  color: #497285;
 }
 
 .day-of-week {
