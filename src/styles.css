@@ -9,7 +9,7 @@ video {
   z-index: -1;
 }
 
-img {
+img.weather-icon {
   width: 58px;
 }
 
@@ -60,8 +60,8 @@ ul {
   color: #ebffdf;
 }
 
-.current-forecast {
-  margin: 25px auto;
+.current-weather {
+  margin: 22px auto;
   color: #335260;
 }
 
@@ -107,11 +107,11 @@ ul {
 }
 
 .current-values {
-  font-size: 14px;
+  font-size: 12px;
   margin-left: 10px;
 }
 
-.five-days-forecast {
+.daily-forecast {
   margin: 15px auto;
   text-align: center;
   color: #495485;
@@ -122,28 +122,32 @@ ul {
 }
 
 .selected-day:hover {
-  background: rgba(185, 217, 232, 0.792);
+  background: rgba(153, 189, 216, 0.7);
   cursor: pointer;
 }
 
 .day-of-week {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
 .date {
   font-size: 16px;
   font-style: italic;
-  line-height: 16px;
-  margin-bottom: 10px;
+  line-height: 0.5;
 }
 
-.five-days-values {
-  font-size: 14px;
+.daily-values {
+  font-size: 15px;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.night-temp {
+.daily-icon {
+  margin-top: 0;
+}
+
+.min-temp {
   opacity: 0.7;
 }
 
@@ -153,7 +157,7 @@ ul {
   font-style: italic;
   text-align: center;
   font-family: cursive;
-  margin: 25px auto;
+  margin: 20px auto;
 }
 
 .footer a {

@@ -56,7 +56,7 @@
           </div>
         </div>
       </form>
-      <div class="row current-forecast">
+      <div class="row current-weather">
         <div class="col-6">
           <div class="card">
             <div class="card-body">
@@ -65,7 +65,7 @@
               <div class="row">
                 <div class="col-5">
                   <div class="d-flex">
-                    <img id="weather-icon" src="" alt="" />
+                    <img class="weather-icon" id="weather-icon" src="" alt="" />
                     <strong class="temperature" id="temperature"></strong>
                     <span class="temperature-scale"
                       ><a href="#" id="celsius" class="active">°C</a>|<a
@@ -98,68 +98,7 @@
           </div>
         </div>
       </div>
-      <div class="row five-days-forecast">
-        <div class="col">
-          <div class="card selected-day">
-            <div class="card-body">
-              <h2 class="card-title day-of-week">MON</h2>
-              <h3 class="date">27 Jun</h3>
-              <p class="card-text five-days-values">☀ Sunny</p>
-              <p class="card-text five-days-values">
-                28°C <br /><span class="night-temp">19°C</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card selected-day">
-            <div class="card-body">
-              <h2 class="card-title day-of-week">TUE</h2>
-              <h3 class="date">27 Jun</h3>
-              <p class="card-text five-days-values">☀ Sunny</p>
-              <p class="card-text five-days-values">
-                32°C <br /><span class="night-temp">18°C</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card selected-day">
-            <div class="card-body">
-              <h2 class="card-title day-of-week">WED</h2>
-              <h3 class="date">28 Jun</h3>
-              <p class="card-text five-days-values">☀ Sunny</p>
-              <p class="card-text five-days-values">
-                32°C <br /><span class="night-temp">19°C</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card selected-day">
-            <div class="card-body">
-              <h2 class="card-title day-of-week">THU</h2>
-              <h3 class="date">29 Jun</h3>
-              <p class="card-text five-days-values">☁ Cloudy</p>
-              <p class="card-text five-days-values">
-                28°C <br /><span class="night-temp">19°C</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card selected-day">
-            <div class="card-body">
-              <h2 class="card-title day-of-week">FRI</h2>
-              <h3 class="date">30 Jun</h3>
-              <p class="card-text five-days-values">☀ Sunny</p>
-              <p class="card-text five-days-values">
-                30°C <br /><span class="night-temp">18°C</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="row daily-forecast" id="forecast"></div>
       <div class="footer">
         <a href="https://github.com/kseniia-chepur/weather-app" target="_blank"
           >Open-source code</a

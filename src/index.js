@@ -36,8 +36,77 @@ function getCurrentDateAndTime(currentDate) {
   return `${day}, ${month} ${date}`;
 }
 
+function formatDay(timestamp) {
+  let time = new Date(timestamp * 1000);
+  let week = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  let day = week[time.getDay()];
+  return day;
+}
+
+function formatDate(timestamp) {
+  let time = new Date(timestamp * 1000);
+  let date = time.getDate();
+  let year = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let month = year[time.getMonth()];
+
+  return `${date} ${month}`;
+}
+
 let currentDate = document.querySelector("#date");
 currentDate.innerHTML = getCurrentDateAndTime(new Date());
+
+// Add html for 5-days forecast
+
+function addFiveDaysForecastHtml(response) {
+  let dailyForecast = response.data.daily;
+  console.log(dailyForecast);
+
+  let fiveDaysForecast = document.querySelector("#forecast");
+
+  let forecastHtml = "";
+  let days = ["MON", "TUE", "WED", "THU", "FRI"];
+
+  dailyForecast.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml = `${forecastHtml} 
+        <div class="col">
+          <div class="card selected-day">
+            <div class="card-body">
+              <h2 class="card-title day-of-week">${formatDay(day.dt)}</h2>
+              <h3 class="date">${formatDate(day.dt)}</h3>
+              <div class="card-text daily-values"><img class="daily-icon" width="40" src="http://openweathermap.org/img/wn/${
+                day.weather[0].icon
+              }@2x.png"> ${day.weather[0].main}
+              </div>
+              <p class="card-text daily-values"><span id="max-temp">
+                  ${Math.round(
+                    day.temp.max
+                  )}°C</span><br /><span class="min-temp">${Math.round(
+        day.temp.min
+      )}°C</span>
+              </p>
+            </div>
+          </div>
+        </div>      
+      `;
+    }
+  });
+
+  fiveDaysForecast.innerHTML = forecastHtml;
+}
 
 // Search by input
 
@@ -91,9 +160,23 @@ function getWeatherForecast(response) {
   document.querySelector("#real-feels").innerHTML = Math.round(
     response.data.main.feels_like
   );
+
+  getCoordinatesBySearch(response.data.coord);
 }
 
-// Get geolocation coordinates
+// Get geolocation coordinates based on search
+
+function getCoordinatesBySearch(coords) {
+  let key = "9f2e2f52f885114eaafb1054b63cf92c";
+  let units = "metric";
+  let lat = coords.lat;
+  let lon = coords.lon;
+  let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,hourly,minutely&appid=${key}&units=${units}`;
+
+  axios.get(url).then(addFiveDaysForecastHtml);
+}
+
+// Get geolocation coordinates of current location
 
 function requestGeolocationCoords(event) {
   event.preventDefault();
@@ -113,7 +196,7 @@ function getGeolocationCoords(position) {
 let currentLocationBtn = document.querySelector("#current-location-btn");
 currentLocationBtn.addEventListener("click", requestGeolocationCoords);
 
-// Convert temperature scales
+// Convert temperature scales for current weather
 
 function convertToFahrenheit(event) {
   event.preventDefault();
@@ -144,6 +227,8 @@ let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", convertToCelsius);
 
 let celsiusTemperature = null;
+
+//Convert temperature scales for daily forecast
 
 // Initial forecast
 
