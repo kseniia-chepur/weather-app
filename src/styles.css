@@ -9,10 +9,6 @@ video {
   z-index: -1;
 }
 
-img.weather-icon {
-  width: 58px;
-}
-
 a {
   text-decoration: none;
 }
@@ -33,9 +29,10 @@ ul {
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-.search-form {
-  width: 95%;
-  margin-left: 15px;
+.card,
+.form-control {
+  background: rgba(231, 224, 187, 0.7);
+  border: none;
 }
 
 .form-control,
@@ -43,10 +40,9 @@ ul {
   margin-top: 20px;
 }
 
-.card,
-.form-control {
-  background: rgba(231, 224, 187, 0.7);
-  border: none;
+.search-form {
+  width: 95%;
+  margin-left: 15px;
 }
 
 .search-btn {
@@ -61,14 +57,14 @@ ul {
 }
 
 .current-weather {
-  margin: 22px auto;
+  margin: 25px auto;
   color: #335260;
 }
 
 .city {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
-  line-height: 14px;
+  line-height: 0.5;
   margin-top: 5px;
 }
 
@@ -77,23 +73,26 @@ ul {
   margin-bottom: 10px;
 }
 
+.weather-icon {
+  width: 56px;
+}
+
 .temperature {
   font-size: 38px;
 }
 
 .temperature-scale {
-  font-size: 15px;
+  font-size: 12px;
   position: relative;
   bottom: -8px;
 }
 
-.active {
+a.active {
   color: #335260;
 }
 
-.active:hover {
+a.active:hover {
   cursor: default;
-  color: #335260;
 }
 
 .weather-description {
@@ -144,7 +143,7 @@ ul {
 }
 
 .daily-icon {
-  margin-top: 0;
+  width: 40px;
 }
 
 .min-temp {
@@ -154,12 +153,16 @@ ul {
 .footer {
   color: #feffdf;
   font-size: 13px;
+  font-family: cursive;
   font-style: italic;
   text-align: center;
-  font-family: cursive;
   margin: 20px auto;
 }
 
 .footer a {
   color: #feffdf;
+}
+
+.footer a:hover {
+  color: #4c5374;
 }
