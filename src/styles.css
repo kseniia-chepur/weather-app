@@ -122,6 +122,7 @@ a.active:hover {
 
 .selected-day:hover {
   background: rgba(153, 189, 216, 0.7);
+  color: #6b6b4c;
   cursor: pointer;
 }
 
