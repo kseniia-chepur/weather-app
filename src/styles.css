@@ -1,3 +1,55 @@
+@media (min-aspect-ratio: 16/9) {
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  div.app-wrapper {
+    max-width: 300px;
+  }
+  .form-control,
+  .current-location-btn {
+    font-size: 8px;
+  }
+  .current-weather div.card {
+    width: 250px;
+  }
+
+  h1.city,
+  h2.current-date {
+    font-size: 22px;
+  }
+  img.weather-icon {
+    width: 40px;
+  }
+  strong.temperature {
+    font-size: 26px;
+  }
+  span.temperature-scale {
+    font-size: 8px;
+    bottom: -5px;
+  }
+  span.weather-description {
+    font-size: 26x;
+    top: 2px;
+  }
+  ul.current-values {
+    font-size: 10px;
+  }
+  .selected-day {
+    margin: 15px 70px;
+  }
+}
+
 body {
   font-family: "Anek Malayalam", sans-serif;
 }
@@ -5,7 +57,6 @@ body {
 video {
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: -1;
 }
 
