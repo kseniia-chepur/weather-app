@@ -16,9 +16,14 @@
   div.app-wrapper {
     max-width: 300px;
   }
+  div.card,
+  .form-control {
+    background: none;
+  }
   .form-control,
   .current-location-btn {
-    font-size: 8px;
+    font-size: 10px;
+    padding: 4px;
   }
   .current-weather div.card {
     width: 250px;
@@ -32,11 +37,11 @@
     width: 40px;
   }
   strong.temperature {
-    font-size: 26px;
+    font-size: 28px;
   }
   span.temperature-scale {
     font-size: 8px;
-    bottom: -5px;
+    bottom: -8px;
   }
   span.weather-description {
     font-size: 26x;
