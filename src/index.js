@@ -1,7 +1,3 @@
-// video settings
-
-// document.querySelector("video").playbackRate = "0.9";
-
 // Get current date
 
 function getCurrentDateAndTime(currentDate) {
