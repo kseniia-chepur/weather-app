@@ -209,5 +209,5 @@ a.active:hover {
 }
 
 .footer a:hover {
-  color: var(--primary-color);
+  text-decoration: underline;
 }
