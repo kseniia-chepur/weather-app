@@ -94,7 +94,7 @@ ul {
 }
 
 a.active {
-  color: #835092;
+  color: var(--primary-color);
 }
 
 a.active:hover {
@@ -155,6 +155,8 @@ a.active:hover {
 
 .daily-icon {
   width: 40px;
+  display: block;
+  margin: 0 auto;
 }
 
 .min-temp {
