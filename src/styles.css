@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #5a4f9b;
+  --primary-color: #3e4a96;
   --secondary-color: #f2f2f2;
 }
 
@@ -48,6 +48,13 @@ ul {
   background: #b95484;
   color: var(--secondary-color);
   border: 1px solid #b95484;
+}
+
+.search-btn:hover,
+.current-location-btn:hover {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  font-weight: bold;
 }
 
 .current-location-btn {
@@ -174,8 +181,7 @@ a.active:hover {
   .app-wrapper {
     max-width: 300px;
   }
-  .card,
-  .form-control {
+  .card {
     background: none;
   }
   .form-control,
