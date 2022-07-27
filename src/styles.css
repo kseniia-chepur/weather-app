@@ -3,46 +3,6 @@
   --secondary-color: #f2f2f2;
 }
 
-@media (max-width: 576px) {
-  div.app-wrapper {
-    max-width: 300px;
-  }
-  div.card,
-  .form-control {
-    background: none;
-  }
-  .form-control,
-  .current-location-btn {
-    font-size: 10px;
-    padding: 4px;
-  }
-  .current-weather div.card {
-    width: 250px;
-  }
-
-  h1.city,
-  h2.current-date {
-    font-size: 22px;
-  }
-  img.weather-icon {
-    width: 40px;
-  }
-  strong.temperature {
-    font-size: 28px;
-  }
-  span.temperature-scale {
-    font-size: 8px;
-    bottom: -8px;
-  }
-  span.weather-description {
-    font-size: 26x;
-    top: 2px;
-  }
-  ul.current-values {
-    font-size: 10px;
-  }
-}
-
 body {
   font-family: "Cormorant Infant", serif;
   font-weight: bold;
@@ -65,9 +25,7 @@ ul {
   background: rgba(191, 169, 188, 0.5);
   margin: 30px auto;
   border-radius: 7px;
-  --webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .card,
@@ -99,7 +57,7 @@ ul {
 
 .current-weather {
   margin: 25px auto;
-  color: #835092;
+  color: var(--primary-color);
 }
 
 .city {
@@ -210,4 +168,47 @@ a.active:hover {
 
 .footer a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  .app-wrapper {
+    max-width: 300px;
+  }
+  .card,
+  .form-control {
+    background: none;
+  }
+  .form-control,
+  .current-location-btn {
+    font-size: 10px;
+    padding: 4px;
+  }
+  .current-weather .card {
+    width: 250px;
+  }
+
+  .city,
+  .current-date {
+    font-size: 22px;
+  }
+  .weather-icon {
+    width: 40px;
+  }
+  .temperature {
+    font-size: 28px;
+  }
+  .temperature-scale {
+    font-size: 8px;
+    bottom: -8px;
+  }
+  .weather-description {
+    font-size: 26x;
+    top: 2px;
+  }
+  .current-values {
+    font-size: 10px;
+  }
+  .footer {
+    font-size: 10px;
+  }
 }

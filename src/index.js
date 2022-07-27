@@ -77,7 +77,7 @@ function addFiveDaysForecast(response) {
   dailyForecast.forEach(function (day, index) {
     if (index < 5) {
       forecastHtml = `${forecastHtml} 
-        <div class="col-sm">
+        <div class="col">
           <div class="card selected-day">
             <div class="card-body">
               <h2 class="card-title day-of-week">${formatDay(day.dt)}</h2>
