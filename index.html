@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital@1&family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
       rel="stylesheet"
     />
     <script
@@ -28,7 +28,7 @@
     <div class="container app-wrapper">
       <form class="search-form" id="search-form">
         <div class="row">
-          <div class="col-6">
+          <div class="col-sm-6">
             <input
               type="🇸earch"
               class="form-control shadow-sm"
@@ -56,45 +56,37 @@
         </div>
       </form>
       <div class="row current-weather">
-        <div class="col-6">
-          <div class="card">
-            <div class="card-body">
-              <h1 class="card-title city" id="city"></h1>
-              <h2 class="current-date" id="date"></h2>
-              <div class="row">
-                <div class="col-5">
-                  <div class="d-flex">
-                    <img class="weather-icon" id="weather-icon" src="" alt="" />
-                    <strong class="temperature" id="temperature"></strong>
-                    <span class="temperature-scale"
-                      ><a href="#" id="celsius" class="active">°C</a>|<a
-                        href="#"
-                        id="fahrenheit"
-                        >F</a
-                      >
-                    </span>
-                  </div>
-                </div>
-                <div class="col-7">
-                  <span class="weather-description" id="description"></span>
-                  <ul class="card-text current-values">
-                    <li>
-                      <i class="fa-solid fa-droplet"></i> Humidity
-                      <span id="humidity"></span>%
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-wind"></i> Wind
-                      <span id="wind"></span>
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-temperature-half"></i> RealFeels
-                      <span id="real-feels"></span>°
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="col-sm-4">
+          <h1 class="city" id="city"></h1>
+          <h2 class="current-date" id="date"></h2>
+        </div>
+        <div class="col-sm-4 d-flex">
+          <img class="img-fluid weather-icon" id="weather-icon" src="" alt="" />
+          <span class="temperature" id="temperature"></span>
+          <span class="temperature-scale"
+            ><a href="#" id="celsius" class="active">°C</a>|<a
+              href="#"
+              id="fahrenheit"
+              >F</a
+            >
+          </span>
+        </div>
+        <div class="col-sm-4 description">
+          <span class="weather-description" id="description"></span>
+        </div>
+      </div>
+      <div class="row current-values">
+        <div class="col">
+          <p>
+            <i class="fa-solid fa-droplet"></i> Humidity
+            <span id="humidity"></span>%
+          </p>
+          <p>
+            <i class="fa-solid fa-wind"></i> Wind
+            <span id="wind"></span>
+          </p>
+          <i class="fa-solid fa-temperature-half"></i> RealFeels
+          <span id="real-feels"></span>°
         </div>
       </div>
       <div class="row daily-forecast" id="forecast"></div>

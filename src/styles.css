@@ -1,11 +1,10 @@
 :root {
-  --primary-color: #3e4a96;
+  --primary-color: #242b59;
   --secondary-color: #f2f2f2;
 }
 
 body {
-  font-family: "Cormorant Infant", serif;
-  font-weight: bold;
+  font-family: "Ibarra Real Nova", serif;
   background: url(../images/landscape.jpg);
   background-size: cover;
 }
@@ -28,9 +27,13 @@ ul {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.card,
 .form-control {
   background: rgba(205, 170, 200, 0.8);
+  border: none;
+}
+
+.card {
+  background: none;
   border: none;
 }
 
@@ -63,34 +66,31 @@ ul {
 }
 
 .current-weather {
-  margin: 25px auto;
+  margin: 50px auto 10px;
   color: var(--primary-color);
 }
 
 .city {
-  font-size: 28px;
+  font-size: 34px;
   font-weight: bold;
   line-height: 0.5;
-  margin-top: 5px;
+  margin-top: 28px;
 }
 
 .current-date {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.weather-icon {
-  width: 56px;
+  font-size: 28px;
 }
 
 .temperature {
-  font-size: 38px;
+  font-size: 56px;
+  line-height: 1.5;
+  margin-top: 12px;
 }
 
 .temperature-scale {
-  font-size: 12px;
+  font-size: 14px;
   position: relative;
-  bottom: -8px;
+  bottom: -28px;
 }
 
 a.active {
@@ -101,23 +101,31 @@ a.active:hover {
   cursor: default;
 }
 
+.description {
+  margin-top: 20px;
+}
+
+.weather-icon {
+  max-width: 100px;
+}
+
 .weather-description {
-  font-size: 26px;
+  font-size: 48px;
   font-weight: bold;
   text-transform: capitalize;
   line-height: 1.5;
-  position: relative;
-  top: 13px;
-  margin-left: 10px;
 }
 
 .current-values {
-  font-size: 12px;
-  margin-left: 10px;
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 0.5;
+  text-align: center;
 }
 
 .daily-forecast {
-  margin: 15px auto;
+  margin: 20px auto 0;
   text-align: center;
   color: var(--primary-color);
 }
@@ -165,8 +173,8 @@ a.active:hover {
 
 .footer {
   color: var(--secondary-color);
+  font-family: "Cormorant Infant", serif;
   font-size: 14px;
-  font-style: italic;
   text-align: center;
   margin: 20px auto;
 }
@@ -183,35 +191,48 @@ a.active:hover {
   .app-wrapper {
     max-width: 300px;
   }
-  .card {
-    background: none;
-  }
   .form-control,
   .current-location-btn {
-    font-size: 10px;
-    padding: 4px;
+    font-size: 12px;
+    padding: 6px;
   }
-  .current-weather .card {
-    width: 250px;
+  .search-btn,
+  .current-location-btn {
+    min-width: 80px;
+    text-align: center;
+    display: inline-block;
+    margin: 10px auto;
   }
-
+  .search-btn {
+    margin: 10px 40px;
+  }
+  .current-location-btn {
+    margin: 10px 60px;
+  }
+  .current-weather {
+    margin-top: 15px;
+    text-align: center;
+  }
   .city,
   .current-date {
-    font-size: 22px;
+    font-size: 30px;
   }
   .weather-icon {
-    width: 40px;
+    margin-left: 24px;
   }
   .temperature {
-    font-size: 28px;
+    font-size: 46px;
+    margin-top: 22px;
   }
   .temperature-scale {
-    font-size: 8px;
-    bottom: -8px;
+    font-size: 10px;
+    bottom: -36px;
+  }
+  .description {
+    margin-top: 0;
   }
   .weather-description {
-    font-size: 26x;
-    top: 2px;
+    font-size: 28px;
   }
   .current-values {
     font-size: 10px;
