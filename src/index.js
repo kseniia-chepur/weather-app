@@ -1,35 +1,27 @@
 // Get current date
 
 function getCurrentDateAndTime(currentDate) {
-  let week = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let year = [
-    "January",
-    "February",
-    "March",
-    "April",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
     "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
 
   let day = week[currentDate.getDay()];
   let month = year[currentDate.getMonth()];
   let date = currentDate.getDate();
 
-  return `${day}, ${month} ${date}`;
+  return `${day} ${date} ${month}`;
 }
 
 let currentDate = document.querySelector("#date");
