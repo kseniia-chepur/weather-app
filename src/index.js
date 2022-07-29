@@ -127,9 +127,7 @@ searchForm.addEventListener("submit", handleSubmit);
 function getWeatherForecast(response) {
   city = response.data.name;
 
-  document.querySelector(
-    "#city"
-  ).innerHTML = `${city}, ${response.data.sys.country}`;
+  document.querySelector("#city").innerHTML = city;
 
   document
     .querySelector("#weather-icon")
