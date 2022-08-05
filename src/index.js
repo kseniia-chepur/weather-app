@@ -1,6 +1,6 @@
 // Get current date
 
-function getCurrentDateAndTime(currentDate) {
+function getCurrentDate(currentDate) {
   let week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let year = [
     "Jan",
@@ -25,7 +25,7 @@ function getCurrentDateAndTime(currentDate) {
 }
 
 let currentDate = document.querySelector("#date");
-currentDate.innerHTML = getCurrentDateAndTime(new Date());
+currentDate.innerHTML = getCurrentDate(new Date());
 
 // Format dates for daily forecast
 
@@ -81,9 +81,9 @@ function addFiveDaysForecast(response) {
               <p class="card-text daily-values"><span id="max-temp">
                   ${Math.round(
                     day.temp.max
-                  )}°C</span><br /><span class="min-temp">${Math.round(
+                  )}°</span><br /><span class="min-temp">${Math.round(
         day.temp.min
-      )}°C</span>
+      )}°</span>
               </p>
             </div>
           </div>

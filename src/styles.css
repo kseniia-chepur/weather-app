@@ -83,14 +83,13 @@ ul {
 
 .temperature {
   font-size: 56px;
-  line-height: 1.5;
-  margin-top: 12px;
+  line-height: 1.8;
 }
 
 .temperature-scale {
   font-size: 14px;
   position: relative;
-  bottom: -28px;
+  bottom: -24px;
 }
 
 a.active {
@@ -131,7 +130,7 @@ a.active:hover {
 }
 
 .selected-day {
-  transition: 200ms all ease-in-out;
+  transition: 250ms all ease-in-out;
 }
 
 .selected-day:hover {
@@ -223,7 +222,7 @@ a.active:hover {
   }
   .temperature {
     font-size: 46px;
-    margin-top: 22px;
+    margin-top: 14px;
   }
   .temperature-scale {
     font-size: 10px;
