@@ -22,7 +22,8 @@ ul {
 .app-wrapper {
   max-width: 650px;
   background: rgba(191, 169, 188, 0.5);
-  margin: 30px auto;
+  margin: 24px auto;
+  padding-bottom: 10px;
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
@@ -157,7 +158,6 @@ a.active:hover {
 .daily-values {
   font-size: 15px;
   font-weight: bold;
-  margin-bottom: 5px;
 }
 
 .daily-icon {
@@ -176,7 +176,7 @@ a.active:hover {
   font-style: italic;
   font-size: 14px;
   text-align: center;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 .footer a {
@@ -225,7 +225,7 @@ a.active:hover {
     font-size: 46px;
     margin-top: 14px;
   }
-  .temperature-scale {
+  .temperature-units {
     font-size: 10px;
     bottom: -40px;
   }
