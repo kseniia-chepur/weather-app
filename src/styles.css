@@ -87,8 +87,9 @@ ul {
   line-height: 2;
 }
 
-.temperature-scale {
+.temperature-units {
   font-size: 14px;
+  font-weight: bold;
   position: relative;
   bottom: -24px;
 }
@@ -218,6 +219,7 @@ a.active:hover {
   }
   .weather-icon {
     margin-left: 24px;
+    padding-top: 12px;
   }
   .temperature {
     font-size: 46px;
@@ -225,7 +227,7 @@ a.active:hover {
   }
   .temperature-scale {
     font-size: 10px;
-    bottom: -36px;
+    bottom: -40px;
   }
   .description {
     margin-top: 0;
