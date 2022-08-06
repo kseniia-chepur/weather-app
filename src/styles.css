@@ -82,8 +82,9 @@ ul {
 }
 
 .temperature {
-  font-size: 56px;
-  line-height: 1.8;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 2;
 }
 
 .temperature-scale {
@@ -100,19 +101,17 @@ a.active:hover {
   cursor: default;
 }
 
-.description {
-  margin-top: 24px;
-}
-
 .weather-icon {
   max-width: 100px;
+  position: relative;
+  bottom: 6px;
 }
 
 .weather-description {
-  font-size: 42px;
+  font-size: 48px;
   font-weight: bold;
   text-transform: capitalize;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 .current-values {
